@@ -180,7 +180,6 @@ p {
         font-family: "Playfair Display", serif;
         font-size: 215px;
         font-weight: 700;
-        font-style: italic;
         color: #fff;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
@@ -305,7 +304,7 @@ p {
     width: 40.33%; }
   .fh5co-main-nav #phone {
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%); }
 
@@ -666,30 +665,9 @@ p {
         float: left;
         width: 100%;
         clear: none !important; } }
-    #fh5co-menus .fh5co-food-menu h2 {
-      margin-bottom: 50px;
-      font-style: italic;
-      position: relative; }
-      #fh5co-menus .fh5co-food-menu h2.fh5co-drinks {
-        padding-left: 80px; }
-        #fh5co-menus .fh5co-food-menu h2.fh5co-drinks:before {
-          background: url(../images/home-4-48.png) no-repeat;
-          content: "";
-          position: absolute;
-          top: -20px;
-          left: 0;
-          width: 64px;
-          height: 64px; }
-      #fh5co-menus .fh5co-food-menu h2.fh5co-dishes {
-        padding-left: 80px; }
-        #fh5co-menus .fh5co-food-menu h2.fh5co-dishes:before {
-          background: url(../images/settings-8-48.png) no-repeat;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 64px;
-          height: 45px; }
+    #fh5co-menus .fh5co-food-menu img.logo {
+      width: 200px;
+      margin-bottom: 40px; }
     #fh5co-menus .fh5co-food-menu ul {
       padding: 0;
       margin: 0; }
@@ -728,7 +706,9 @@ p {
               margin: 0 0 10px 0;
               padding: 0;
               font-size: 20px;
-              color: #000; }
+              color: #000;
+              text-transform: capitalize;
+              line-height: 30px; }
         #fh5co-menus .fh5co-food-menu ul li .fh5co-food-pricing {
           float: right;
           width: 20%;
@@ -1106,13 +1086,21 @@ p {
         -ms-border-radius: 50%;
         border-radius: 50%; }
       #fh5co-type h3.with-icon.icon-1:before, #fh5co-type h3.with-icon.icon-1::before {
-        background: url(../images/chess-18-64.png) no-repeat center center; }
+        background: url(../images/pizza-2-64.png) no-repeat center center; }
       #fh5co-type h3.with-icon.icon-2:before, #fh5co-type h3.with-icon.icon-2::before {
-        background: url(../images/book-64.png) no-repeat center center; }
+        background: url(../images/chess-18-64.png) no-repeat center center; }
       #fh5co-type h3.with-icon.icon-3:before, #fh5co-type h3.with-icon.icon-3::before {
-        background: url(../images/add-list-64.png) no-repeat center center; }
+        background: url(../images/seo-performance-64.png) no-repeat center center; }
       #fh5co-type h3.with-icon.icon-4:before, #fh5co-type h3.with-icon.icon-4::before {
-        background: url(../images/bar-chart-5-64.png) no-repeat center center; }
+        background: url(../images/page-quality.png) no-repeat center center; }
+      #fh5co-type h3.with-icon.icon-5:before, #fh5co-type h3.with-icon.icon-5::before {
+        background: url(../images/add-list-64.png) no-repeat center center; }
+      #fh5co-type h3.with-icon.icon-6:before, #fh5co-type h3.with-icon.icon-6::before {
+        background: url(../images/chili-pepper-18-64.png) no-repeat center center; }
+      #fh5co-type h3.with-icon.icon-7:before, #fh5co-type h3.with-icon.icon-7::before {
+        background: url(../images/shoes-footprints-64.png) no-repeat center center; }
+      #fh5co-type h3.with-icon.icon-8:before, #fh5co-type h3.with-icon.icon-8::before {
+        background: url(../images/cook-64.png) no-repeat center center; }
   #fh5co-type p {
     color: rgba(255, 255, 255, 0.7); }
 
@@ -1260,7 +1248,7 @@ p {
       height: 100%; }
 
 #team {
-  padding-top: 80px; }
+  padding: 80px 0; }
   #team h2 {
     font-size: 50px;
     font-style: italic;
@@ -1275,11 +1263,82 @@ p {
     #team .member-wrap img {
       width: 100%; }
     #team .member-wrap .title {
+      margin: 20px 0;
+      font-size: 20px;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      position: relative; }
+      #team .member-wrap .title::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #fb6e14;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%); }
     #team .member-wrap .description {
-      font-size: 14px;
+      font-size: 18px;
       text-align: center; }
+
+#s-way {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #130d08 url(../images/wood_1.png) repeat;
+  padding: 5% 0 10%; }
+  #s-way * {
+    color: white; }
+  #s-way .heading {
+    font-size: 40px;
+    margin: 20px 0; }
+  #s-way .way-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #s-way .way-wrap .stop {
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 30px;
+      margin-top: 100px; }
+      #s-way .way-wrap .stop::before {
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1; }
+      #s-way .way-wrap .stop::after {
+        content: '';
+        width: 2px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0; }
+      #s-way .way-wrap .stop:first-child::after {
+        height: 50px;
+        top: -50px; }
+      #s-way .way-wrap .stop:last-child {
+        margin-top: 230px; }
+        #s-way .way-wrap .stop:last-child::before {
+          content: url("../images/pizdotina.png");
+          width: auto;
+          height: auto;
+          background-color: transparent;
+          top: -215px; }
+        #s-way .way-wrap .stop:last-child::after {
+          display: none; }
 
 .pulse {
   width: 22px;

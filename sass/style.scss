@@ -313,7 +313,7 @@ p {
         font-family: $font-primary;
         font-size: 215px;
         font-weight: 700;
-        font-style: italic;
+        //font-style: italic;
         color: $brand-white;
         @include transition(.3s);
         @media screen and (max-width: $screen-md) {
@@ -459,7 +459,7 @@ p {
 
   #phone {
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -894,38 +894,12 @@ p {
       width: 100%;
       clear: none !important;
     }
-    h2 {
-      margin-bottom: 50px;
-      font-style: italic;
-      position: relative;
 
-      &.fh5co-drinks {
-        padding-left: 80px;
-        &:before {
-          background: url(../images/home-4-48.png) no-repeat;
-          content: "";
-          position: absolute;
-          top: -20px;
-          left: 0;
-          width: 64px;
-          height: 64px;
-        }
-      }
-      &.fh5co-dishes {
-        padding-left: 80px;
-        &:before {
-          background: url(../images/settings-8-48.png) no-repeat;
-          content: "";
-          position: absolute;
-
-          top: 0;
-          left: 0;
-          width: 64px;
-          height: 45px;
-        }
-      }
-
+    img.logo {
+      width: 200px;
+      margin-bottom: 40px;
     }
+
     ul {
       padding: 0;
       margin: 0;
@@ -967,6 +941,8 @@ p {
               padding: 0;
               font-size: 20px;
               color: $brand-black;
+              text-transform: capitalize;
+              line-height: 30px;
             }
           }
         }
@@ -982,7 +958,6 @@ p {
     }
   }
 }
-
 
 #fh5co-events {
   padding: 7em 0;
@@ -1404,22 +1379,42 @@ p {
       }
       &.icon-1 {
         &:before, &::before {
-          background: url(../images/chess-18-64.png) no-repeat center center;
+          background: url(../images/pizza-2-64.png) no-repeat center center;
         }
       }
       &.icon-2 {
         &:before, &::before {
-          background: url(../images/book-64.png) no-repeat center center;
+          background: url(../images/chess-18-64.png) no-repeat center center;
         }
       }
       &.icon-3 {
         &:before, &::before {
-          background: url(../images/add-list-64.png) no-repeat center center;
+          background: url(../images/seo-performance-64.png) no-repeat center center;
         }
       }
       &.icon-4 {
         &:before, &::before {
-          background: url(../images/bar-chart-5-64.png) no-repeat center center;
+          background: url(../images/page-quality.png) no-repeat center center;
+        }
+      }
+      &.icon-5 {
+        &:before, &::before {
+          background: url(../images/add-list-64.png) no-repeat center center;
+        }
+      }
+      &.icon-6 {
+        &:before, &::before {
+          background: url(../images/chili-pepper-18-64.png) no-repeat center center;
+        }
+      }
+      &.icon-7 {
+        &:before, &::before {
+          background: url(../images/shoes-footprints-64.png) no-repeat center center;
+        }
+      }
+      &.icon-8 {
+        &:before, &::before {
+          background: url(../images/cook-64.png) no-repeat center center;
         }
       }
 
@@ -1625,21 +1620,20 @@ p {
     color: #a99c92;
   }
 
-
-  .map-wrap{
+  .map-wrap {
     height: 500px;
     padding: 0 10%;
 
-    #map{
+    #map {
       height: 100%;
     }
   }
 }
 
 #team {
-  padding-top: 80px;
+  padding: 80px 0;
 
-  h2{
+  h2 {
     font-size: 50px;
     font-style: italic;
     position: relative;
@@ -1649,24 +1643,137 @@ p {
     text-align: center;
   }
 
-  .member-wrap{
+  .member-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    img{
+    img {
       width: 100%;
     }
 
-    .title{
-
+    .title {
+      margin: 20px 0;
+      font-size: 20px;
       text-align: center;
       font-weight: bold;
+
+      position: relative;
+
+      &::after {
+        content: '';
+
+        display: block;
+
+        width: 40px;
+        height: 2px;
+
+        background-color: $brand-primary;
+
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
-    .description{
-      font-size: 14px;
+    .description {
+      font-size: 18px;
       text-align: center;
+    }
+  }
+}
+
+#s-way {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #130d08 url(../images/wood_1.png) repeat;
+
+  padding: 5% 0 10%;
+
+  * {
+    color: white;
+  }
+
+  .heading{
+    font-size: 40px;
+    margin: 20px 0;
+  }
+
+  .way-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .stop {
+      text-align: center;
+      text-transform: uppercase;
+
+      position: relative;
+
+      font-size: 30px;
+
+      margin-top: 100px;
+
+      &::before {
+        content: '';
+
+        width: 60px;
+        height: 60px;
+
+        background-color: white;
+
+        border-radius: 50%;
+
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+
+        width: 2px;
+        height: 100px;
+
+        background-color: white;
+
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 0;
+      }
+
+      &:first-child {
+        &::after {
+          height: 50px;
+          top: -50px;
+        }
+      }
+
+      &:last-child {
+        margin-top: 230px;
+
+        &::before {
+          content: url("../images/pizdotina.png");
+          width: auto;
+          height: auto;
+          background-color: transparent;
+          top: -215px;
+        }
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -1677,36 +1784,38 @@ p {
   border-radius: 50%;
   //background: #cca92c;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
   animation: pulse 2s infinite;
 }
+
 .pulse:hover {
   animation: none;
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
   70% {
-    -webkit-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+    -webkit-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
+
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
   70% {
-    -moz-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
-    box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+    -moz-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
   }
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
 
@@ -1731,7 +1840,7 @@ p {
     filter: brightness(50%) invert(1);
   }
 
-  img{
+  img {
     width: 100%;
     padding: 10%;
   }
@@ -1741,14 +1850,14 @@ p {
   top: 50%;
   transform: translateY(-50%);
 
-  .modal-content{
+  .modal-content {
     padding: 5% 10%;
 
-    h3{
+    h3 {
       text-align: center;
     }
 
-    .center{
+    .center {
       display: flex;
       justify-content: center;
     }
