@@ -175,10 +175,10 @@ p {
       #fh5co-home .flexslider .fh5co-text h1 {
         position: relative;
         text-transform: capitalize;
-        margin: 0;
+        margin: 60px 0 0;
         padding: 0;
         font-family: "Playfair Display", serif;
-        font-size: 215px;
+        font-size: 159px;
         font-weight: 700;
         color: #fff;
         -webkit-transition: 0.3s;
@@ -188,11 +188,11 @@ p {
           #fh5co-home .flexslider .fh5co-text h1 {
             font-size: 100px; } }
         #fh5co-home .flexslider .fh5co-text h1::after {
-          content: 'Франчайзинг Pizza';
+          content: 'Франчайзинг';
           font-size: 40px;
           font-family: "Merriweather", serif;
           position: absolute;
-          top: -15px;
+          top: -25px;
           left: 50%;
           transform: translate(-50%); }
       #fh5co-home .flexslider .fh5co-text h2 {
@@ -366,7 +366,8 @@ p {
       font-weight: 300;
       position: relative;
       padding-bottom: 30px;
-      text-align: center; }
+      text-align: center;
+      font-size: 50px; }
       #fh5co-about .fh5co-text .heading:after {
         content: "";
         position: absolute;
@@ -707,7 +708,6 @@ p {
               padding: 0;
               font-size: 20px;
               color: #000;
-              text-transform: capitalize;
               line-height: 30px; }
         #fh5co-menus .fh5co-food-menu ul li .fh5co-food-pricing {
           float: right;
@@ -754,11 +754,11 @@ p {
       padding: 5em 0; } }
   #fh5co-events .fh5co-event {
     background: #fff;
-    padding: 50px;
+    padding: 48px;
     text-align: center;
     margin-bottom: 30px;
     position: relative;
-    height: 600px;
+    height: 615px;
     padding-bottom: 0; }
     #fh5co-events .fh5co-event:before {
       border: 2px solid #e6e6e6;
@@ -1056,6 +1056,8 @@ p {
   #fh5co-type > .container {
     z-index: 10;
     position: relative; }
+    #fh5co-type > .container .heading {
+      color: white; }
   #fh5co-type .fh5co-type {
     float: left;
     width: 100%;
@@ -1291,9 +1293,6 @@ p {
   padding: 5% 0 10%; }
   #s-way * {
     color: white; }
-  #s-way .heading {
-    font-size: 40px;
-    margin: 20px 0; }
   #s-way .way-wrap {
     display: flex;
     flex-direction: column;
