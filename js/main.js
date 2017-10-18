@@ -588,7 +588,32 @@
 		footerAnimate();
 
 
+        $("form").submit(function(e) {
+            e.preventDefault(); // avoid to execute the actual submit of the form.
 
+            var url = "http://localhost:8080/mail"; // the script where you handle the form input.
+
+			// var f1 = $("#form");
+			// var f2 = this;
+			//
+
+			var data = null;
+			try {
+				data = $(this).serialize();
+			} catch (e) {
+				data = e;
+			}
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: data,
+                success: function(data)
+                {
+                    alert(data);
+                }
+            });
+        });
 	});
 
 
