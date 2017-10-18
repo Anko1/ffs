@@ -64,6 +64,16 @@
 
           transition: .3s;
 
+          &.true{
+            background-color: rgb(94, 73, 58);
+            color: ghostwhite;
+
+            &:hover{
+              background-color: rgb(94, 73, 58);
+              color: ghostwhite;
+            }
+          }
+
           &::after{
             content: ' м²';
           }
@@ -85,7 +95,7 @@
         height: 172px;
         width: 100%;
         background-color: #fafafa;
-        border: 2px solid black;
+        border: 2px solid rgb(94, 73, 58);
         z-index: 0;
 
         transition: bottom .3s linear;

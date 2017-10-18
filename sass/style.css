@@ -1246,8 +1246,12 @@ p {
     color: #a99c92; }
   #fh5co-help .map-wrap {
     height: 500px;
-    padding: 0 10%; }
+    padding: 0 10%;
+    display: flex;
+    justify-content: center; }
     #fh5co-help .map-wrap #map {
+      height: 100%; }
+    #fh5co-help .map-wrap img {
       height: 100%; }
 
 #team {

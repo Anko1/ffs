@@ -46,6 +46,12 @@
           border: none;
           font-weight: bold;
           transition: .3s; }
+          .calculator .CheckBoxes .Square .sizes .Size.true {
+            background-color: #5e493a;
+            color: ghostwhite; }
+            .calculator .CheckBoxes .Square .sizes .Size.true:hover {
+              background-color: #5e493a;
+              color: ghostwhite; }
           .calculator .CheckBoxes .Square .sizes .Size::after {
             content: ' м²'; }
           .calculator .CheckBoxes .Square .sizes .Size:hover {
@@ -59,7 +65,7 @@
         height: 172px;
         width: 100%;
         background-color: #fafafa;
-        border: 2px solid black;
+        border: 2px solid #5e493a;
         z-index: 0;
         transition: bottom .3s linear;
         display: flex;

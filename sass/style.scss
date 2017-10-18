@@ -1629,8 +1629,14 @@ p {
   .map-wrap {
     height: 500px;
     padding: 0 10%;
+    display: flex;
+    justify-content: center;
 
     #map {
+      height: 100%;
+    }
+
+    img{
       height: 100%;
     }
   }

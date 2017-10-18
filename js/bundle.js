@@ -21915,7 +21915,7 @@
 
 	        var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
 
-	        _this.state = { data: props.data, selected: -1, info: null };
+	        _this.state = { data: props.data, selected: -1, info: null, index: -1 };
 
 	        _this.onSquareSelect = _this.onSquareSelect.bind(_this);
 	        return _this;
@@ -21923,9 +21923,9 @@
 
 	    _createClass(Calculator, [{
 	        key: 'onSquareSelect',
-	        value: function onSquareSelect(id, info) {
+	        value: function onSquareSelect(id, info, index) {
 	            // console.log(info);
-	            this.setState({ selected: id, info: info });
+	            this.setState({ selected: id, info: info, index: index });
 	        }
 	    }, {
 	        key: 'render',
@@ -21937,7 +21937,7 @@
 	                if (_this2.state.selected === i) {
 	                    info = _this2.state.info;
 	                }
-	                return _react2.default.createElement(_Square2.default, { key: i, id: i, info: info, square: sq, isSelected: _this2.state.selected === i, click: _this2.onSquareSelect });
+	                return _react2.default.createElement(_Square2.default, { key: i, id: i, info: info, square: sq, isSelected: _this2.state.selected === i, index: _this2.state.index, click: _this2.onSquareSelect });
 	            });
 
 	            return _react2.default.createElement(
@@ -21981,21 +21981,23 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	function createSize(sq, i, onClick) {
+	function createSize(sq, i, onClick, selected) {
+	    var cssClass = 'Size ' + selected;
+
 	    return _react2.default.createElement(
 	        'button',
-	        { className: 'Size', onClick: onClick, key: i, value: sq },
+	        { className: cssClass, onClick: onClick, key: i, value: sq },
 	        sq
 	    );
 	}
 
-	var CheckBox = function (_React$Component) {
-	    _inherits(CheckBox, _React$Component);
+	var Square = function (_React$Component) {
+	    _inherits(Square, _React$Component);
 
-	    function CheckBox(props) {
-	        _classCallCheck(this, CheckBox);
+	    function Square(props) {
+	        _classCallCheck(this, Square);
 
-	        var _this = _possibleConstructorReturn(this, (CheckBox.__proto__ || Object.getPrototypeOf(CheckBox)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (Square.__proto__ || Object.getPrototypeOf(Square)).call(this, props));
 
 	        _this.state = {
 	            id: props.id,
@@ -22003,14 +22005,15 @@
 	            square: props.square,
 	            click: props.click,
 	            info: props.info,
-	            first: true
+	            first: true,
+	            index: props.index
 	        };
 
 	        _this.onClick = _this.onClick.bind(_this);
 	        return _this;
 	    }
 
-	    _createClass(CheckBox, [{
+	    _createClass(Square, [{
 	        key: 'onClick',
 	        value: function onClick(e) {
 	            var Square = this.state.square;
@@ -22019,21 +22022,16 @@
 	            var indexOf = Square.sqValues.indexOf(selectedSq);
 	            var data = Square.investment[indexOf] + ' | ' + Square.places[indexOf];
 
-	            this.state.click(this.state.id, data);
+	            this.state.click(this.state.id, data, indexOf);
 	        }
-
-	        // componentDidMount() {
-	        //     this.setState({
-	        //     });
-	        // }
-
 	    }, {
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
 	            this.setState({
 	                first: false,
 	                isSelected: nextProps.isSelected,
-	                info: nextProps.info
+	                info: nextProps.info,
+	                index: nextProps.index
 	            });
 	        }
 	    }, {
@@ -22044,7 +22042,7 @@
 	            var Square = this.state.square;
 
 	            var sizes = Square.sqValues.map(function (sq, i) {
-	                return createSize(sq, i, _this2.onClick);
+	                return createSize(sq, i, _this2.onClick, _this2.state.isSelected && i == _this2.state.index);
 	            });
 
 	            var classes = 'Square ' + Square.name + ' ' + (this.state.isSelected || this.state.first);
@@ -22074,12 +22072,12 @@
 	                        null,
 	                        '\u0406\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0456\u0457: ',
 	                        newInfo[0],
-	                        ' \u0442. \u0433\u0440\u043D'
+	                        '$'
 	                    ),
 	                    _react2.default.createElement(
 	                        'span',
 	                        null,
-	                        '\u041F\u043E\u0441\u0430\u0434\u043E\u0447\u043D\u0438\u0445 \u043C\u0456\u0441\u0446\u044C: ',
+	                        '\u041F\u043E\u0441\u0430\u0434\u043A\u043E\u0432\u0438\u0445 \u043C\u0456\u0441\u0446\u044C: ',
 	                        newInfo[1]
 	                    )
 	                )
@@ -22087,10 +22085,10 @@
 	        }
 	    }]);
 
-	    return CheckBox;
+	    return Square;
 	}(_react2.default.Component);
 
-	exports.default = CheckBox;
+	exports.default = Square;
 
 /***/ }),
 /* 186 */
