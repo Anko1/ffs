@@ -80,5 +80,8 @@
           font-size: 20px;
           width: 100%;
           text-align: center; }
+    .calculator .CheckBoxes .Slice .sizes {
+      background: url("../images/ahv_2149.jpg") center no-repeat;
+      background-size: cover; }
 
 /*# sourceMappingURL=react-calc.css.map */
