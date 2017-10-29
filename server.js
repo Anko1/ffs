@@ -14,15 +14,16 @@ let transporter = nodemailer.createTransport({
     // }
 });
 
-
+//server `settings`
 const server = express();
-
 server.use(bodyParser.urlencoded({ extended: false }));
 
+//for test only
 server.get('/mail', (req, res) => {
    res.send('MAIL')
 });
 
+//route for both forms
 server.post('/mail', (req, res) => {
     const data = req.body;
 
@@ -44,6 +45,7 @@ server.post('/mail', (req, res) => {
     res.status(200).end();
 });
 
+//server start
 server.listen(PORT, () => {
     console.log(`Server started at ${PORT} port!`);
 });
