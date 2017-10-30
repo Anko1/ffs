@@ -593,11 +593,7 @@
         $("form").submit(function (e) {
             e.preventDefault(); // avoid to execute the actual submit of the form.
 
-            var url = "http://localhost:8080/mail"; // the script where you handle the form input.
-
-            // var f1 = $("#form");
-            // var f2 = this;
-            //
+            var url = "http://franchcelentano.com/mail"; // the script where you handle the form input.
 
             var data = null;
             try {
@@ -614,6 +610,8 @@
                     alert(data);
                 }
             });
+
+            this.reset();
         });
     });
 
