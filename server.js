@@ -29,9 +29,9 @@ server.post('/mail', (req, res) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: `"${data.name}" <${data.email}>`, // sender address
-        to: 'r.tokarska@ffs-company.com', // list of receivers
-        subject: 'FFS', // Subject line
+        from: `franchising@ffs-company.com`, // sender address
+        to: 'franchising@ffs-company.com', // list of receivers
+        subject: `From FFS "${data.name}" <${data.email}>`, // Subject line
         text: data.msg // plain text body
     };
 
