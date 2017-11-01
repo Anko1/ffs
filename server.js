@@ -20,7 +20,7 @@ server.use(bodyParser.urlencoded({ extended: false }));
 
 //for test only
 server.get('/mail', (req, res) => {
-   res.send('MAIL')
+    res.send('MAIL')
 });
 
 //route for both forms
@@ -30,8 +30,8 @@ server.post('/mail', (req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: `franchising@ffs-company.com`, // sender address
-        to: 'franchising@ffs-company.com', // list of receivers
-        subject: `From FFS "${data.name}" <${data.email}>`, // Subject line
+        to: 'o.haivoronsky@ffs-company.com', // list of receivers
+        subject: `From landing: "${data.name}" <${data.email}>`, // Subject line
         text: data.msg // plain text body
     };
 
