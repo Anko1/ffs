@@ -6,12 +6,17 @@ const nodemailer = require('nodemailer');
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
     host: 'smtp.ffs-company.com',
-    port: 587,
+    port: 25,
     secure: false, // true for 465, false for other ports
-    // auth: {
-    //     user: account.user, // generated ethereal user
-    //     pass: account.pass  // generated ethereal password
-    // }
+// auth: {
+//     user: '', // generated ethereal user
+//     pass: ''  // generated ethereal password
+// }
+ tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false
+    }
+
 });
 
 //server `settings`
@@ -20,7 +25,7 @@ server.use(bodyParser.urlencoded({ extended: false }));
 
 //for test only
 server.get('/mail', (req, res) => {
-   res.send('MAIL')
+    res.send('MAIL')
 });
 
 //route for both forms
@@ -29,9 +34,9 @@ server.post('/mail', (req, res) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: `franchising@ffs-company.com`, // sender address
-        to: 'franchising@ffs-company.com', // list of receivers
-        subject: `From FFS "${data.name}" <${data.email}>`, // Subject line
+        from: 'franchising@ffs-company.com', // sender address
+        to: 'r.tokarska@ffs-company.com', // list of receivers
+        subject: `From landing-page: "${data.name}" <${data.email}>`, // Subject line
         text: data.msg // plain text body
     };
 

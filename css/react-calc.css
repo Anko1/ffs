@@ -1,0 +1,19 @@
+@charset "UTF-8";#calculator{height:500px;}
+.calculator{height:100%;padding:0 10%;}
+.calculator .CheckBoxes{display:flex;justify-content:space-around;align-items:center;height:100%;}
+.calculator .CheckBoxes .Square{position:relative;display:flex;align-items:center;width:22%;height:100%;transition:filter .3s;}
+.calculator .CheckBoxes .Square.false{filter:grayscale(0.8);}
+.calculator .CheckBoxes .Square.true{filter:grayscale(0);}
+.calculator .CheckBoxes .Square .title{font-size:24px;position:absolute;top:0;width:100%;text-align:center;}
+.calculator .CheckBoxes .Square .sizes{background:url("../images/calc-bg.jpg") center no-repeat;background-size:cover;width:100%;height:80%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;}
+.calculator .CheckBoxes .Square .sizes .Size{display:block;margin:20px;height:60px;width:115px;border-radius:25%;border:none;font-weight:bold;transition:.3s;}
+.calculator .CheckBoxes .Square .sizes .Size.true{background-color:#5e493a;color:ghostwhite;}
+.calculator .CheckBoxes .Square .sizes .Size.true:hover{background-color:#5e493a;color:ghostwhite;}
+.calculator .CheckBoxes .Square .sizes .Size::after{content:' м²';}
+.calculator .CheckBoxes .Square .sizes .Size:hover{cursor:pointer;background-color:ghostwhite;}
+.calculator .CheckBoxes .Square .sizes .Size:focus{outline:none;}
+.calculator .CheckBoxes .Square .info{position:absolute;left:0;height:172px;width:100%;background-color:#fafafa;border:2px solid #5e493a;z-index:0;transition:bottom .3s linear;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.calculator .CheckBoxes .Square .info.false{bottom:50px;}
+.calculator .CheckBoxes .Square .info.true{bottom:-120px;}
+.calculator .CheckBoxes .Square .info span{font-size:20px;width:100%;text-align:center;}
+.calculator .CheckBoxes .Slice .sizes{background:url("../images/ahv_2149.jpg") center no-repeat;background-size:cover;}
